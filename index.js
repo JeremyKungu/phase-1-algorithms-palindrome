@@ -1,6 +1,19 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let length = word.length;
+  
+  for (let i = 0; i < length / 2; i++) {
+    const j = length - 1 - i;
+
+    if(word[i] !== word[j]) {
+      return false;
+    }
+  }
+  return true;
 }
+
+//calling the function
+isPalindrome("racecar");
 
 /* 
   Add your pseudocode here
